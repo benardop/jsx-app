@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM  from "react-dom/client";
 
 
-function MyThing() {
+function Greetings() {
 
-  let isValid = true
+  let defined = true;
+  let username = "Benard";
   return (
-    <span>{ isValid ? 'Valid' : 'Invalid' }</span>
+    <span>{ (defined) ? 'Hello ' + username  : 'Not defined' }</span>
   )
 }
 
@@ -34,6 +35,6 @@ function BookDetails() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<div>
-    <MyThing/>,
+    <Greetings/>,
     <BookDetails/>
 </div>);
